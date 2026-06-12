@@ -1,139 +1,167 @@
-# claude-skills-overview
+# claude-paper-skills-overview
 
-A curated collection of **140 Claude Code skills across 9 repos**, covering **paper research**, **paper figures / scientific visualization**, and **framework / architecture diagram drawing**.
+A curated collection of **140 Claude Code skills across 9 repos**, organized by **paper workflow stage** — from idea to publication, plus diagram drawing.
 
-Two original research suites plus 7 hand-picked high-starred skill repos.
+> 💡 Skills are grouped by **what they're for** (the stage of the paper), not by which repo they come from. Repo origin is shown after each skill as `(repo #)`, mapped in the [Source repos](#source-repos) table.
 
-## Summary
+## Workflow at a glance
 
-| Repo | Stars | Folder | Skills | Focus |
+```
+💡 Idea  →  📚 Research  →  ✍️ Writing  →  📊 Figures  →  🔍 Review  →  🎤 Slides/Posters
+```
+
+- [1. 💡 Paper idea & discovery](#1--paper-idea--discovery)
+- [2. 📚 Literature & research](#2--literature--research)
+- [3. ✍️ Paper writing](#3-️-paper-writing)
+- [4. 📊 Paper figures & visualization](#4--paper-figures--visualization)
+- [5. 🔍 Paper review & integrity](#5--paper-review--integrity)
+- [6. 🎤 Slides, posters & talks](#6--slides-posters--talks)
+- [7. 🧩 Framework / architecture diagrams](#7--framework--architecture-diagrams)
+- [8. 🧪 Experiments & infrastructure](#8--experiments--infrastructure)
+- [9. 📜 Patents](#9--patents)
+- [Source repos](#source-repos)
+- [Activation](#activation)
+
+---
+
+## 1. 💡 Paper idea & discovery
+
+Brainstorm, generate, and validate research directions before committing.
+
+| Skill | What it does | Repo |
+|---|---|---|
+| `idea-creator` | Generate and rank research ideas from a broad direction. | 2 |
+| `idea-discovery` | Full pipeline: broad direction → validated, pilot-tested ideas. | 2 |
+| `research-refine` | Turn a vague direction into a focused, frontier-aware method plan. | 2 |
+| `novelty-check` | Verify an idea is novel against recent literature. | 2 |
+| `scientific-brainstorming` | Research ideation partner — hypotheses, gaps, interdisciplinary links. | 5 |
+| `hypothesis-generation` | Formulate testable hypotheses and predictions. | 4, 5 |
+
+## 2. 📚 Literature & research
+
+Search, read, and synthesize prior work.
+
+| Skill | What it does | Repo |
+|---|---|---|
+| `deep-research` | 13-agent pipeline for rigorous academic research (7 modes). | 1 |
+| `literature-review` | Systematic reviews across PubMed, arXiv, bioRxiv, Semantic Scholar. | 4, 5 |
+| `research-lit` | Find related work, summarize key ideas. | 2 |
+| `arxiv` · `openalex` · `semantic-scholar` | Search/fetch papers from arXiv, OpenAlex, and venue databases. | 2 |
+| `citation-management` | Search Scholar/PubMed, extract metadata, validate citations. | 4, 5 |
+| `research-lookup` · `parallel-web` | Fast/deep web research over academic sources. | 4, 5 |
+
+## 3. ✍️ Paper writing
+
+Draft and compile the manuscript.
+
+| Skill | What it does | Repo |
+|---|---|---|
+| `academic-paper` | 12-agent writing pipeline, 10 modes (plan/outline/revision/abstract/…). | 1 |
+| `academic-pipeline` | Orchestrates research → write → check → review → revise end-to-end. | 1 |
+| `paper-plan` | Generate a structured outline from results and review conclusions. | 2 |
+| `paper-write` | Draft LaTeX section by section from an outline. | 2 |
+| `paper-writing` | Full pipeline: narrative report → submission-ready PDF. | 2 |
+| `paper-compile` | Compile LaTeX to PDF, fix errors, verify output. | 2 |
+| `research-paper-writing` | Improve ML/CV/NLP writing quality (structure, flow, presentation). | 3 |
+| `scientific-writing` | Write full-paragraph scientific manuscripts via two-stage process. | 4, 5 |
+
+## 4. 📊 Paper figures & visualization
+
+Generate plots, schematics, and illustrations.
+
+| Skill | What it does | Repo |
+|---|---|---|
+| `matplotlib` · `seaborn` · `plotly` | Core plotting libraries (static + interactive). | 5 |
+| `networkx` | Network/graph construction, analysis, and visualization. | 5 |
+| `scientific-visualization` | Journal-ready multi-panel figures, error bars, colorblind-safe. | 5 |
+| `scientific-schematics` | Publication-quality AI schematics (NN architectures, pathways). | 4, 5 |
+| `paper-figure` | Figures and tables from experiment results. | 2 |
+| `paper-illustration` | AI architecture/method illustrations with refinement loop. | 2 |
+| `figure-spec` | Deterministic publication-quality SVGs from structured JSON. | 2 |
+| `infographics` · `generate-image` | Infographics and general AI image generation. | 4, 5 |
+
+## 5. 🔍 Paper review & integrity
+
+Critique, verify claims, and check integrity before submission.
+
+| Skill | What it does | Repo |
+|---|---|---|
+| `academic-paper-reviewer` | Simulates 5 reviewers (EIC + 3 peers + Devil's Advocate). | 1 |
+| `peer-review` | Methodology, stats, reproducibility, ethics, figure integrity. | 4, 5 |
+| `scientific-critical-thinking` | Assess rigor, bias, confounding, evidence quality (GRADE/ROB). | 4, 5 |
+| `auto-review-loop` | Autonomous multi-round review → fix → re-review. | 2 |
+| `kill-argument` | Adversarial: strongest rejection memo, then point-by-point defense. | 2 |
+| `result-to-claim` | Judge which claims the results actually support. | 2 |
+| `citation-audit` | Verify every reference is real and correctly attributed. | 2 |
+| `paper-claim-audit` | Verify every number/comparison matches raw result files. | 2 |
+| `experiment-audit` | Audit experiment integrity before claiming results. | 2 |
+| `rebuttal` | Parse external reviews, draft a grounded, venue-safe rebuttal. | 2 |
+
+## 6. 🎤 Slides, posters & talks
+
+Communicate the work.
+
+| Skill | What it does | Repo |
+|---|---|---|
+| `paper-slides` | Beamer slides (PDF + PPTX) with speaker notes and script. | 2 |
+| `paper-poster-html` | Conference poster as a single print-ready HTML/CSS file. | 2 |
+| `paper-talk` | End-to-end paper → slides → polish → export talk pipeline. | 2 |
+| `slides-polish` | Per-page review + targeted PPTX/Beamer layout fixes. | 2 |
+| `scientific-slides` | Slide decks for research talks (PowerPoint / Beamer). | 4, 5 |
+| `latex-posters` | LaTeX posters (beamerposter / tikzposter / baposter). | 4, 5 |
+| `paper-2-web` | Convert papers into websites, videos, and presentation formats. | 4, 5 |
+
+## 7. 🧩 Framework / architecture diagrams
+
+Draw system, model, and editorial diagrams.
+
+| Skill | What it does | Repo |
+|---|---|---|
+| `architecture-diagram` | Dark-themed system/cloud/network diagrams as HTML+SVG. | 6 |
+| `excalidraw-diagram` | Excalidraw JSON diagrams for workflows and architectures. | 7 |
+| `drawio-skill` | draw.io diagrams incl. ML/DL model figures (Transformer/CNN/LSTM). | 8 |
+| `diagram-design` | 13 editorial diagram types (flowchart, sequence, ER, tree…). | 9 |
+| `mermaid-diagram` | Mermaid flowcharts, sequence, class, ER, Gantt, and 18 more. | 2 |
+
+## 8. 🧪 Experiments & infrastructure
+
+Plan, run, and monitor ML experiments (from ARIS, repo 2).
+
+| Skill | What it does |
+|---|---|
+| `experiment-plan` | Turn a proposal into a claim-driven experiment roadmap. |
+| `run-experiment` | Deploy/run ML experiments (local, Vast.ai, Modal, remote GPU). |
+| `experiment-queue` | SSH job queue for multi-seed/config runs with OOM-aware retry. |
+| `monitor-experiment` · `analyze-results` | Track progress, collect and interpret results. |
+
+## 9. 📜 Patents
+
+Patent drafting pipeline (from ARIS, repo 2): `prior-art-search` · `patent-novelty-check` · `claims-drafting` · `specification-writing` · `patent-pipeline` · `patent-review` · `jurisdiction-format`.
+
+---
+
+## Source repos
+
+| # | Repo | Stars | Folder | Skills |
 |---|---|---|---|---|
-| [Academic Research Skills](https://github.com/Imbad0202/academic-research-skills) | 30.7k | `academic-research-skills/` | 4 | Full research→write→review pipeline |
-| [ARIS — Auto-Research-In-Sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | 12.0k | `auto-claude-research/` | 79 | Autonomous research/paper/experiment skills |
-| [Research Paper Writing Skills (ML/CV/NLP)](https://github.com/Master-cai/Research-Paper-Writing-Skills) | 3.7k | `research-paper-writing-skills/` | 1 | ML/CV/NLP paper writing |
-| [Claude Scientific Writer](https://github.com/K-Dense-AI/claude-scientific-writer) | 1.9k | `claude-scientific-writer/` | 27 | Scientific writing & figures |
-| [Scientific Skills (claude-code-templates, trimmed)](https://github.com/davila7/claude-code-templates) | 28k | `davila7-scientific-skills/` | 25 | Figures, plots, schematics, slides, lit |
-| [Architecture Diagram Generator](https://github.com/Cocoon-AI/architecture-diagram-generator) | 5.9k | `architecture-diagram-generator/` | 1 | System architecture diagrams (HTML/SVG) |
-| [Excalidraw Diagram Skill](https://github.com/coleam00/excalidraw-diagram-skill) | 3.7k | `excalidraw-diagram-skill/` | 1 | Excalidraw diagrams (self-correcting) |
-| [draw.io Skill](https://github.com/Agents365-ai/drawio-skill) | 2.7k | `drawio-skill/` | 1 | draw.io incl. ML/DL framework figures |
-| [Diagram Design (13 editorial types)](https://github.com/cathrynlavery/diagram-design) | 2.6k | `diagram-design/` | 1 | 13 editorial diagram types |
+| 1 | [Academic Research Skills](https://github.com/Imbad0202/academic-research-skills) | 30.7k | `academic-research-skills/` | 4 |
+| 2 | [ARIS — Auto-Research-In-Sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) | 12.0k | `auto-claude-research/` | 79 |
+| 3 | [Research Paper Writing Skills (ML/CV/NLP)](https://github.com/Master-cai/Research-Paper-Writing-Skills) | 3.7k | `research-paper-writing-skills/` | 1 |
+| 4 | [Claude Scientific Writer](https://github.com/K-Dense-AI/claude-scientific-writer) | 1.9k | `claude-scientific-writer/` | 27 |
+| 5 | [Scientific Skills (claude-code-templates, trimmed)](https://github.com/davila7/claude-code-templates) | 28k | `davila7-scientific-skills/` | 25 |
+| 6 | [Architecture Diagram Generator](https://github.com/Cocoon-AI/architecture-diagram-generator) | 5.9k | `architecture-diagram-generator/` | 1 |
+| 7 | [Excalidraw Diagram Skill](https://github.com/coleam00/excalidraw-diagram-skill) | 3.7k | `excalidraw-diagram-skill/` | 1 |
+| 8 | [draw.io Skill](https://github.com/Agents365-ai/drawio-skill) | 2.7k | `drawio-skill/` | 1 |
+| 9 | [Diagram Design (13 editorial types)](https://github.com/cathrynlavery/diagram-design) | 2.6k | `diagram-design/` | 1 |
 
-**Total: 140 skills across 9 repos.**
-
-## Academic Research Skills
-
-⭐ 30.7k · [github.com/Imbad0202/academic-research-skills](https://github.com/Imbad0202/academic-research-skills) · `academic-research-skills/` · **4 skills**
-
-| Skill | Description |
-|---|---|
-| `academic-paper` | 12-agent academic paper writing pipeline. 10 modes (full/plan/outline/revision/revision-coach/abstract/lit-review/format-convert/citation-check/disclosure). |
-| `academic-paper-reviewer` | Multi-perspective academic paper review with dynamic reviewer personas. Simulates 5 independent reviewers (EIC + 3 peer reviewers + Devil's Advocate). |
-| `academic-pipeline` | Orchestrator for the full academic research pipeline: research → write → integrity check → review → revise → re-review → re-revise → final integrity check. |
-| `deep-research` | Universal deep research agent team. 13-agent pipeline for rigorous academic research on any topic. 7 modes: full research, quick brief, paper review, lit-review, etc. |
-
-## ARIS — Auto-Research-In-Sleep
-
-⭐ 12.0k · [github.com/wanshuiyin/Auto-claude-code-research-in-sleep](https://github.com/wanshuiyin/Auto-claude-code-research-in-sleep) · `auto-claude-research/` · **79 skills**
-
-A large autonomous research suite spanning idea discovery, experiment planning/running, paper writing, review loops, patent drafting, and GPU job management. Highlights:
-
-| Skill | Description |
-|---|---|
-| `idea-discovery` / `idea-creator` / `research-refine` | Go from a broad direction to validated, pilot-tested research ideas. |
-| `experiment-plan` / `run-experiment` / `experiment-queue` | Build claim-driven experiment roadmaps and run multi-seed/config ML jobs (local, Vast.ai, Modal). |
-| `paper-write` / `paper-plan` / `paper-writing` / `paper-compile` | Draft, plan, and compile LaTeX papers section by section. |
-| `auto-review-loop` / `kill-argument` / `result-to-claim` | Autonomous multi-round review, adversarial critique, and claim-support judging. |
-| `citation-audit` / `paper-claim-audit` / `experiment-audit` | Zero-context integrity checks for citations, numbers, and experiment results. |
-| `paper-figure` / `paper-illustration` / `figure-spec` / `mermaid-diagram` | Generate figures, AI illustrations, deterministic SVGs, and diagrams. |
-| `paper-talk` / `paper-slides` / `paper-poster-html` / `slides-polish` | Slides, posters, and full conference talk pipelines. |
-| `prior-art-search` / `patent-pipeline` / `claims-drafting` | Full patent drafting pipeline (CN/US/EP). |
-
-…and ~60 more (search, profiling, GPU/cloud, wiki, rebuttal, resubmit). See the source repo for the complete list.
-
-## Research Paper Writing Skills (ML/CV/NLP)
-
-⭐ 3.7k · [github.com/Master-cai/Research-Paper-Writing-Skills](https://github.com/Master-cai/Research-Paper-Writing-Skills) · `research-paper-writing-skills/` · **1 skill**
-
-| Skill | Description |
-|---|---|
-| `research-paper-writing` | Improve academic paper writing quality for ML/CV/NLP-style papers — section structure, paragraph flow, reviewer-facing presentation, self-review. |
-
-## Claude Scientific Writer
-
-⭐ 1.9k · [github.com/K-Dense-AI/claude-scientific-writer](https://github.com/K-Dense-AI/claude-scientific-writer) · `claude-scientific-writer/` · **27 skills**
-
-| Skill | Description |
-|---|---|
-| `scientific-writing` | Write scientific manuscripts in full paragraphs via a two-stage section process. |
-| `literature-review` / `citation-management` / `research-lookup` | Systematic literature reviews (PubMed, arXiv, bioRxiv, Semantic Scholar) and citation handling. |
-| `scientific-schematics` / `infographics` / `generate-image` | Publication-quality diagrams, infographics, and AI image generation. |
-| `latex-posters` / `pptx-posters` / `scientific-slides` | Posters and slide decks for conferences. |
-| `peer-review` / `scientific-critical-thinking` | Manuscript evaluation and research-rigor assessment. |
-| `research-grants` | Competitive proposals for NSF, NIH, DOE, DARPA. |
-| `clinical-decision-support` / `clinical-reports` / `treatment-plans` | Clinical/pharma document generation. |
-| `docx` / `pdf` / `pptx` / `xlsx` / `markitdown` | Document toolkits and conversion. |
-| `paper-2-web` / `parallel-web` / `venue-templates` / `market-research-reports` / `hypothesis-generation` | Web conversion, venue templates, market reports, hypothesis generation. |
-
-## Scientific Skills (from claude-code-templates, trimmed)
-
-⭐ 28k · [github.com/davila7/claude-code-templates](https://github.com/davila7/claude-code-templates) · `davila7-scientific-skills/` · **25 skills**
-
-| Skill | Description |
-|---|---|
-| `matplotlib` / `seaborn` / `plotly` / `networkx` | Plotting and network/graph visualization libraries. |
-| `scientific-visualization` / `scientific-schematics` | Journal-ready multi-panel figures and publication-quality diagrams. |
-| `scientific-writing` / `scientific-brainstorming` / `scientific-critical-thinking` | Writing, ideation, and rigor assessment. |
-| `literature-review` / `citation-management` / `research-lookup` | Literature search and citation handling. |
-| `peer-review` / `hypothesis-generation` / `research-grants` | Review, hypothesis design, and proposals. |
-| `latex-posters` / `scientific-slides` / `paper-2-web` / `venue-templates` | Posters, slides, web conversion, venue templates. |
-| `docx` / `pdf` / `pptx` / `xlsx` / `generate-image` | Document toolkits and image generation. |
-
-> Trimmed from 139 → 25 skills (dropped ~114 off-scope bioinformatics/chem/quantum domain libraries). Re-clone the full set from the source repo if needed.
-
-## Architecture Diagram Generator
-
-⭐ 5.9k · [github.com/Cocoon-AI/architecture-diagram-generator](https://github.com/Cocoon-AI/architecture-diagram-generator) · `architecture-diagram-generator/` · **1 skill**
-
-| Skill | Description |
-|---|---|
-| `architecture-diagram` | Polished dark-themed architecture diagrams as self-contained HTML+SVG (system, infrastructure, cloud, security, network topology). |
-
-## Excalidraw Diagram Skill
-
-⭐ 3.7k · [github.com/coleam00/excalidraw-diagram-skill](https://github.com/coleam00/excalidraw-diagram-skill) · `excalidraw-diagram-skill/` · **1 skill**
-
-| Skill | Description |
-|---|---|
-| `excalidraw-diagram` | Create Excalidraw diagram JSON files that make visual arguments (workflows, architectures, concepts). |
-
-## draw.io Skill
-
-⭐ 2.7k · [github.com/Agents365-ai/drawio-skill](https://github.com/Agents365-ai/drawio-skill) · `drawio-skill/` · **1 skill**
-
-| Skill | Description |
-|---|---|
-| `drawio-skill` | Diagrams, flowcharts, ER/UML/sequence/class diagrams, network topology, and ML/DL model figures (Transformer/CNN/LSTM). |
-
-## Diagram Design (13 editorial types)
-
-⭐ 2.6k · [github.com/cathrynlavery/diagram-design](https://github.com/cathrynlavery/diagram-design) · `diagram-design/` · **1 skill**
-
-| Skill | Description |
-|---|---|
-| `diagram-design` | Technical and product diagrams — architecture, flowchart, sequence, state machine, ER, timeline, swimlane, quadrant, tree, org chart, and more. |
+**Total: 140 skills across 9 repos.** Skills 4 and 5 overlap heavily (the davila7 set is a trimmed superset of the Scientific Writer figure/writing skills).
 
 ## Activation
 
-These skills are stored here, not auto-registered with Claude Code. To enable one, copy or symlink its folder into `~/.claude/skills/<name>/`. The `academic-research-skills` suite is a plugin — install via:
+These skills are stored locally, not auto-registered with Claude Code. To enable one, copy or symlink its folder into `~/.claude/skills/<name>/`. The `academic-research-skills` suite (repo 1) is a plugin — install via:
 
 ```
 /plugin marketplace add Imbad0202/academic-research-skills
 ```
 
 Some skills require API keys or MCP servers (search, GPU, Overleaf, etc.) — check each source repo's README/SETUP.
-
-### Notes
-
-- **`auto-claude-research`** excludes the repo's `skills-codex*` review-variant copies (not real skills).
-- **`claude-scientific-writer`** shipped each skill 3× (`.claude/skills`, `skills`, `scientific_writer`); duplicates removed, `skills/` kept.
-- **`davila7-scientific-skills`** trimmed from 139 → 25 skills (dropped ~114 off-scope domain libraries).
