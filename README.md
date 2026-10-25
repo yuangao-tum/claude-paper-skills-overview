@@ -1,6 +1,6 @@
 # claude-paper-skills-overview
 
-A curated collection of **140 Claude Code skills across 9 repos**, organized by **paper workflow stage** — from idea to publication, plus diagram drawing.
+A curated collection of **141 Claude Code skills across 10 repos**, organized by **paper workflow stage** — from idea to publication, plus diagram drawing.
 
 > 💡 Skills are grouped by **what they're for** (the stage of the paper), not by which repo they come from. Repo origin is shown after each skill as `(repo #)`, mapped in the [Source repos](#source-repos) table.
 
@@ -8,6 +8,7 @@ A curated collection of **140 Claude Code skills across 9 repos**, organized by 
 
 ```
 💡 Idea  →  📚 Research  →  ✍️ Writing  →  📊 Figures  →  🔍 Review  →  🎤 Slides/Posters
+                 🪐 watch the whole loop live while it runs (section 10)
 ```
 
 - [1. 💡 Paper idea & discovery](#1--paper-idea--discovery)
@@ -19,6 +20,7 @@ A curated collection of **140 Claude Code skills across 9 repos**, organized by 
 - [7. 🧩 Framework / architecture diagrams](#7--framework--architecture-diagrams)
 - [8. 🧪 Experiments & infrastructure](#8--experiments--infrastructure)
 - [9. 📜 Patents](#9--patents)
+- [10. 🪐 Workflow monitoring](#10--workflow-monitoring)
 - [Source repos](#source-repos)
 - [Activation](#activation)
 
@@ -138,6 +140,14 @@ Plan, run, and monitor ML experiments (from ARIS, repo 2).
 
 Patent drafting pipeline (from ARIS, repo 2): `prior-art-search` · `patent-novelty-check` · `claims-drafting` · `specification-writing` · `patent-pipeline` · `patent-review` · `jurisdiction-format`.
 
+## 10. 🪐 Workflow monitoring
+
+Watch a multi-session, multi-agent Claude Code workflow (for example a review → experiments → rewrite loop) as one live page.
+
+| Skill | What it does | Repo |
+|---|---|---|
+| `agent-dashboard` | Live 3D dashboard of the workflow: each stage is a planet coloured by its status, each agent or session is a named planet orbiting the stage it works on. Alongside: run progress, reviewer comments and how each was addressed, the plan, and the machine queues. Works as a local HTML file or as a claude.ai Artifact that updates live. | 10 |
+
 ---
 
 ## Source repos
@@ -153,8 +163,9 @@ Patent drafting pipeline (from ARIS, repo 2): `prior-art-search` · `patent-nove
 | 7 | [Excalidraw Diagram Skill](https://github.com/coleam00/excalidraw-diagram-skill) | 3.7k | `excalidraw-diagram-skill/` | 1 |
 | 8 | [draw.io Skill](https://github.com/Agents365-ai/drawio-skill) | 2.7k | `drawio-skill/` | 1 |
 | 9 | [Diagram Design (13 editorial types)](https://github.com/cathrynlavery/diagram-design) | 2.6k | `diagram-design/` | 1 |
+| 10 | [Agent Dashboard](https://github.com/yuangao-tum/agent-dashboard) | new | `agent-dashboard/` | 1 |
 
-**Total: 140 skills across 9 repos.** Skills 4 and 5 overlap heavily (the davila7 set is a trimmed superset of the Scientific Writer figure/writing skills).
+**Total: 141 skills across 10 repos.** Skills 4 and 5 overlap heavily (the davila7 set is a trimmed superset of the Scientific Writer figure/writing skills).
 
 ## Activation
 
@@ -162,6 +173,12 @@ These skills are stored locally, not auto-registered with Claude Code. To enable
 
 ```
 /plugin marketplace add Imbad0202/academic-research-skills
+```
+
+`agent-dashboard` (repo 10) installs as a skill folder:
+
+```
+git clone https://github.com/yuangao-tum/agent-dashboard ~/.claude/skills/agent-dashboard
 ```
 
 Some skills require API keys or MCP servers (search, GPU, Overleaf, etc.) — check each source repo's README/SETUP.
